@@ -75,6 +75,7 @@ public class GetChat extends HttpServlet {
 
                                 JsonObject chatListObject = new JsonObject();
 
+                                chatListObject.addProperty("id", chat.getId());
                                 chatListObject.addProperty("fromUser", chat.getFromUser().getId());
                                 chatListObject.addProperty("msg", chat.getText());
                                 chatListObject.addProperty("time", new SimpleDateFormat("yyyy-mm-dd hh:mm a").format(chat.getTime()));
